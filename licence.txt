@@ -1,0 +1,15 @@
+--English
+This template was created by Jenn Pereira.
+The project was created for educational purposes and does not pretend to monetize.
+
+If you have any questions, please contact me at Github:
+
+https://github.com/denislozitskiy
+
+--Русский
+Этот шаблон был создан Jenn Pereira.
+Проект был создан для образовательных целей и не претендует на монетизацию.
+
+Если у Вас есть какие либо вопросы, свяжитесь со мной на Github:
+
+https://github.com/denislozitskiy

@@ -1,0 +1,624 @@
+//font-family: 'Open Sans', sans-serif;
+$font: 'Open Sans', sans-serif
+////////////////////////SLIDE///////////////////////////////
+body
+  margin: 0px
+  font-display: swap
+  font-family: $font
+.wrapper
+  max-width: 305px
+  margin: 0px auto    
+ul
+  list-style: none
+  padding: 0px
+a 
+  text-decoration: none
+  &:visited
+    color: white
+button
+  cursor: pointer
+.div_heading
+  font-weight: 300
+  margin: 0em
+  font-size: 2em
+  b 
+    font-weight: 600
+.div_text
+  font-family: sans-serif
+  font-style: italic
+  color: #6c6c6c    
+.line_1, .line_2
+  background-color: #fcac45
+  width: 92px
+  height: 3px
+  margin: 0px auto
+  border: none
+  margin-top: 0.75em 
+.line_2
+  background-color: #fcac45
+  width: 61px
+  height: 3px
+  opacity: 0.8
+.team_slider, .clients_slider, .reviews_slider
+  position: relative
+  overflow: hidden
+  display: flex
+  flex-flow: row nowrap
+  align-items: flex-end
+  justify-content: center
+  .slider_nav
+    width: 2em
+    height: 2em
+    margin: 0rem 2rem
+    z-index: 10    
+    background: #e3e3e3
+    appearance: none
+    position: relative
+    cursor: pointer
+  .team_slider_inner, .clients_slider_inner, .reviews_slider_inner
+    position: absolute
+    top: 0
+    left: 0
+    width: 100% * 3
+    transition: all 1s ease-out
+    display: flex
+    flex-flow: row nowrap
+    .team_slider_page, .clients_slider_page, .reviews_slider_page
+      flex: 1
+::-webkit-scrollbar
+  width: 7.5px
+::-webkit-scrollbar-track
+  background: #383838
+::-webkit-scrollbar-thumb 
+  background: #fcac45
+  border-radius: 10px
+  &:hover
+    background: #c4822d                
+////////////////////////SLIDE///////////////////////////////
+.header
+  background-color: #111111
+  text-align: center
+  height: 100vh
+  position: relative 
+  .logo
+    display: none
+  .btn-menuopen
+    padding: 0.75rem
+    width: 100%
+    background-color: transparent
+    border: none
+    color: white
+    font-size: 1.25em
+    font-weight: 300
+    letter-spacing: 2px
+    &::after
+      content: ' \f0c9'
+      font-family: "Font Awesome 5 Free"
+      font-weight: 900
+  .menu   
+    transition: all ease-in-out 0.3s
+    position: relative
+    overflow: hidden
+    margin: 0px
+    z-index: 1000
+    max-height: 0px
+    a 
+      display: block
+      padding: 0.75em 0em
+      color: white
+      transition: all ease-in-out 0.2s
+      &:hover
+        color: #fcac45
+  .menu_open
+    max-height: 30em
+    background-color: rgba(17, 17, 17, 0.9)    
+  .header_text
+    width: 80%
+    color: #c3c3c3
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    h1
+      font-weight: 300
+      &::after
+        content: ' SPIRIT8'
+        color: #fcac45
+        font-weight: 800
+  .btn-down
+    font-size: 2.5em
+    display: block
+    color: #e3e3e3
+    background-color: transparent
+    border: none
+    position: absolute
+    top: 85%
+    left: 50%
+    transform: translate(-50%, -50%)
+    transition: all ease-in-out 0.3s
+    &:hover
+      color: #fcac45
+    &:focus
+        outline: none         
+////////////////////////SLIDE///////////////////////////////
+.aboutus
+  color: #6c6c6c
+  padding: 2em 0em
+  h2
+    color: black
+    font-weight: 300
+    margin-top: 0em
+    &::after
+      content: ''
+      position: relative
+      display: block
+      background-color: #fcac45
+      top: 7.5px
+      width: 92px
+      height: 3.5px
+    b 
+      font-weight: 600  
+  ul
+    li
+      font-weight: 800
+      margin-top: 1em
+      &::before
+        content: '\f140'
+        font-family: "Font Awesome 5 Free"
+        font-weight: 900
+        margin-right: 0.25rem
+      i
+        font-family: sans-serif
+        font-weight: 400
+  button
+    padding: 0.75em
+    background-color: transparent
+    border: 1px solid #7f7f7f
+    color: #6c6c6c
+    font-family: $font
+    border-radius: 4px
+    transition: all 0.3s ease-in-out
+    &:hover
+      color: white
+      background-color: #6c6c6c
+    &::before
+      content: '\f0b1'
+      font-family: "Font Awesome 5 Free"
+      font-weight: 900
+      margin-right: 0.25rem              
+////////////////////////SLIDE///////////////////////////////
+.team
+  text-align: center
+  background-color: #070707
+  color: white
+  padding: 2em 0em
+  .team_slider
+    height: 180px*3
+    .slider_nav
+      &:checked
+        background: #fcac45
+        @for $i from 0 to 3
+          &:nth-of-type(#{$i+1})
+            ~.team_slider_inner
+              transform: translateX((-100% * $i) / 3)
+    .team_slider_page
+      padding: 2em 0em 1em
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+      .team_person
+        width: 50%
+        font-size: 0.75em
+        padding: 0% 2.5%
+        box-sizing: border-box
+        &:hover img
+          border-color: #fcac45
+        img
+          height: 100px
+          width: 100px
+          border-radius: 50%
+          border: 4px solid transparent
+          transition: all 0.3s ease-in-out
+        .team_person_name
+          h3, p
+            margin: 0em
+////////////////////////SLIDE///////////////////////////////
+.services
+  text-align: center
+  padding: 2em 0em
+  .services_container
+    display: flex
+    flex-wrap: wrap
+    padding-top: 1em
+    .services_item
+      width: 50%
+      color: #222222
+      padding: 0% 2.5%
+      box-sizing: border-box
+      i 
+        font-size: 2.75em
+        border: 4px solid #fcac45
+        border-radius: 50%
+        padding: 0.5em
+        min-width: 45px
+        transition: 0.3s all ease-in-out
+        &:hover
+          color: white
+          background-color: #fcac45
+      h3
+        font-size: 1.15em
+        font-weight: 600
+        margin-bottom: 0em
+      p
+        font-size: 0.75em
+        margin-top: 0.5em  
+////////////////////////SLIDE///////////////////////////////
+.clients
+  text-align: center
+  background-color: #0b0b0b
+  color: white
+  padding: 2em 0em
+  .clients_slider
+    height: 126px*2
+    .slider_nav
+      &:checked
+        background: #fcac45
+        @for $i from 0 to 3
+          &:nth-of-type(#{$i+1})
+            ~.clients_slider_inner
+              transform: translateX((-100% * $i) / 3)
+    .clients_slider_page
+      padding: 2em 0em
+      .clients_item
+        display: block
+        margin: 0px auto 0.5em
+        &:last-child
+          margin-bottom: 0em  
+////////////////////////SLIDE///////////////////////////////
+.portfolio
+  text-align: center
+  padding: 2em 0em
+  .portfolio_filter
+    padding: 0.5em 0em 1.5em
+    p
+      font-weight: 600
+    .portfolio_filter_bar
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      li
+        background-color: transparent
+        border: none
+        border-right: 1px solid #919191
+        color: #919191
+        font-size: 1.0em
+        width: 50%
+        padding: 0.5em 0em
+        box-sizing: border-box
+        &:nth-child(even)
+          border-right: none
+      .active_filter_btn
+        color: black
+        font-weight: 600        
+  .portfolio_container
+    display: flex
+    flex-wrap: wrap
+    position: relative
+    .portfolio_item
+      flex: 50%
+      position: relative
+      transition: 0.3s all ease-in-out
+      &:hover .portfolio_item_hover
+        opacity: 1 
+      img
+        display: block
+        width: 100%  
+      .portfolio_item_hover
+        opacity: 0
+        position: absolute
+        top: 0
+        left: 0
+        display: flex
+        flex-direction: column
+        justify-content: center
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.65)
+        transition: all 0.3s ease-in-out
+        h3 
+          color: white
+          font-weight: 600
+          margin: 0em auto
+          width: 80%
+        p
+          color: #b2b2b2
+          margin: 0.25em 0em
+        a
+          border: 1px solid #fcac45
+          border-radius: 50%
+          color: #fcac45
+          font-size: 1.5em
+          width: 32px
+          padding: 0.1em
+          font-weight: 300
+          margin: 0px auto
+          display: block      
+////////////////////////SLIDE///////////////////////////////
+.reviews
+  text-align: center
+  background-color: #0b0b0b
+  padding: 2em 0em
+  color: white
+  .reviews_slider
+    height: 250px
+    .slider_nav
+      &:checked
+        background: #fcac45
+        @for $i from 0 to 3
+          &:nth-of-type(#{$i+1})
+            ~.reviews_slider_inner
+              transform: translateX((-100% * $i) / 3)
+    .reviews_item
+      h4
+        text-transform: uppercase
+        font-weight: 400
+      p
+        color: #b2b2b2b2
+        span
+          font-weight: 300        
+////////////////////////SLIDE///////////////////////////////
+.contactus
+  text-align: center
+  padding: 2em 0em
+  form
+    text-align: right
+    label
+      display: block
+      text-align: left
+      width: 100%
+      color: #636363
+      margin-bottom: 0.5em
+      .required
+        color: red
+      input, textarea
+        display: block
+        width: 100%
+        padding: 0.5em
+        font-size: 1em
+        box-sizing: border-box
+        border: 1px solid #999999
+        resize: none
+    .submit
+      color: white
+      background-color: #fcac45
+      border: none
+      padding: 0.75em 2em
+      cursor: pointer
+      transition: 0.3s all ease-in-out
+      &:hover
+        background-color: #ff9000
+////////////////////////SLIDE///////////////////////////////
+.footer
+  background-color: #222222
+  padding: 1em 0em
+  color: #b2b2b2
+  ul
+    display: flex
+    justify-content: space-around
+    a 
+      border-radius: 50%
+      border: 3px solid #b2b2b2
+      padding: 0.2em
+      width: 41px
+      display: block
+      box-sizing: border-box
+      font-size: 1.25em
+      text-align: center
+      transition: 0.3s all ease-in-out
+      &:hover
+        color: #222222
+        border-color: white
+        background-color: white
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+@media screen and (min-width: 360px)
+  .wrapper
+    max-width: 340px         
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////            
+@media screen and (min-width: 375px)
+  .wrapper
+    max-width: 355px
+  .team
+    .team_slider
+      height: 590px
+      .team_slider_page
+        .team_person
+          font-size: 0.95em
+  .services
+    .services_container  
+      .services_item
+        p
+          font-size: 0.95em  
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////    
+@media screen and (min-width: 411px)
+  .wrapper
+    max-width: 390px
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////          
+@media screen and (min-width: 731px)
+  .wrapper
+    max-width: 720px
+  .header
+    background: fixed 50% 50%/cover no-repeat url(/img/header.jpg)
+    .header_text
+      color: #e3e3e3
+    .menu
+      display: flex
+      flex-wrap: wrap
+      li
+        width: 50%
+    .menu_open
+      background-color: transparent 
+  .aboutus
+    .wrapper
+      max-width: 390px
+  .team
+    background: fixed 50% 50%/cover no-repeat url(/img/team.jpg)
+    .team_slider
+      height: 590px
+      .team_slider_page
+        .team_person
+          font-size: 1em
+          padding: 0% 5%
+  .services
+    .services_container
+        .services_item
+          font-size: 1em
+          padding: 0% 5%       
+  .clients
+    background: fixed 50% 50%/cover no-repeat url(/img/clients.jpg)
+  .portfolio
+    .portfolio_filter
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-bottom: 0em
+      .portfolio_filter_bar
+        flex-wrap: nowrap
+        li
+          width: auto
+          padding: 0.15em 0.75em 
+          cursor: pointer
+          &:nth-child(even)
+            border-right: 1px solid #919191
+          &:last-child
+            border-right: none  
+    .portfolio_container
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-gap: 0.5em
+      .portfolio_item
+        .portfolio_item_hover
+          justify-content: space-evenly
+          padding: 5% 0%
+          box-sizing: border-box
+  .reviews
+    background: fixed 50% 50%/cover no-repeat url(/img/reviews.jpg)
+    padding: 4em 0em
+    .reviews_slider
+      height: 180px
+  .contactus
+    form
+      display: grid
+      grid-template-colunms: 1fr 1fr
+      grid-column-gap: 1.5em
+      .form_message
+        grid-column: 1/3
+      .div_submit
+        grid-column: 2/3
+        text-align: right
+        .submit
+          width: 50%
+  .footer
+    .wrapper
+      display: flex
+      justify-content: space-between
+      align-items: center
+      ul
+        li
+          margin-left: 1em         
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+@media screen and (min-width: 1024px)
+  .wrapper
+    max-width: 950px
+  .div_text
+      margin-top: 3em  
+  .header
+    padding-top: 2%
+    .header_logo_menu
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .logo
+        display: block
+      .btn-menuopen
+        display: none
+      .menu
+        max-height: 30em
+        display: flex
+        li
+          margin-left: 2em
+          width: auto
+    .header_text
+      top: 45.5%
+      font-size: 1.2em   
+  .aboutus
+    padding: 7.5% 0%
+    background: 50% 50% no-repeat url(/img/aboutus.jpg) 
+    .wrapper
+      margin-left: 50%
+  .team
+    padding: 3.5% 0%
+    .team_slider
+      height: 357px
+      .team_slider_page
+        .team_person
+          width: 25%
+          padding: 0% 1%
+          img
+            height: 130px
+            width: 130px
+  .services
+    padding: 5% 0%
+    .services_container
+      .services_item
+        width: 25%
+        padding: 0% 1.5%
+  .clients
+    padding: 6% 0%
+    .clients_slider
+      height: 215px
+      .clients_slider_page
+        display: flex
+        padding: 5em 0%
+        .clients_item
+          width: 20%
+          display: block
+          margin: 0px
+          padding: 0% 2%
+          box-sizing: border-box
+  .portfolio
+    padding: 5% 0%    
+    .portfolio_filter
+      margin-top: 7%
+    .portfolio_container
+      grid-gap: 2em
+  .reviews
+    padding: 6% 0%
+    .reviews_slider
+      height: 230px
+      .reviews_item
+        padding: 4% 0%
+  .contactus
+    padding: 6% 0%
+    form
+      margin-top: 3em
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+@media screen and (min-width: 1200px)
+  .wrapper
+    max-width: 1140px
+  .team_slider, .clients_slider, .reviews_slider
+    .slider_nav
+      width: 1em
+      height: 1em
+      margin: 0rem 0.5rem
